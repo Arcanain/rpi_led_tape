@@ -1,4 +1,6 @@
-# rpi_led_tape
+# reference 
+
+## rpi_led_tape
 led tape
 
 ws2812について
@@ -8,3 +10,7 @@ ws2812について
 led tape のラズパイで制御方法
 1. https://dev.classmethod.jp/articles/raspberry-pi-tape-led-ws2815/
 2. https://www.youtube.com/watch?v=BZDwrxX8YEU
+
+
+## ros raspberry pi led blink
+1. https://kanpapa.com/today/2022/05/ros-pub-sub-pigpio-blink-led.html
