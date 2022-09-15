@@ -5,7 +5,7 @@ install pip3 and install ws281x library from pip3
 1. `sudo apt install pip3`
 2. `sudo pip3 install ws281x`
 
-### reference 
+## reference 
 
 ### rpi_led_tape
 led tape
@@ -19,5 +19,5 @@ led tape のラズパイで制御方法
 2. https://www.youtube.com/watch?v=BZDwrxX8YEU
 
 
-###ros raspberry pi led blink
+### ros raspberry pi led blink
 1. https://kanpapa.com/today/2022/05/ros-pub-sub-pigpio-blink-led.html
