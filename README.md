@@ -1,4 +1,4 @@
-#note
+# note
 Before using ws281x library 
 install pip3 and install ws281x library from pip3
 
