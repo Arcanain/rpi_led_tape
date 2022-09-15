@@ -1,5 +1,14 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# led subledtape
+
+import rospy
+import pigpio
 from rpi_ws281x import Color, PixelStrip
-import time 
+
+from std_msgs.msg import String
+
 
 LED_COUNT = 18  # Number of LED pixels.
 LED_PIN = 18  # GPIO pin connected to the pixels (must support PWM!).
@@ -37,11 +46,26 @@ class Ws281x:
 
 led = Ws281x()
 
-#while True:]
-#led.on(0,100,100)
-#time.sleep(0.5)
-led.off()
-#time.sleep(0.5)
+GPIO_PIN = 27
+
+pi = pigpio.pi()
+pi.set_mode(GPIO_PIN, pigpio.OUTPUT)
+
+def callback(data):
+    rospy.loginfo(rospy.get_caller_id() + 'I heard %s', data.data)
+    p_out = int(data.data)
+    pi.write(GPIO_PIN, p_out)
     
-#except KeyboardInterrupt:
- #       led.off()
+    if p_out == 1:
+    	led.on(100,0,0)
+    else:
+    	led.on(0,100,0)	
+    	
+
+def listener():
+    rospy.init_node('listener', anonymous=True)
+    rospy.Subscriber('chatter', String, callback) # topic name and kata should be same 
+    rospy.spin()
+
+if __name__ == '__main__':
+    listener()

@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 from rpi_ws281x import Color, PixelStrip
 import time 
 
@@ -36,12 +39,5 @@ class Ws281x:
             self.__strip.show()
 
 led = Ws281x()
-
-#while True:]
-#led.on(0,100,100)
-#time.sleep(0.5)
 led.off()
-#time.sleep(0.5)
-    
-#except KeyboardInterrupt:
- #       led.off()
+
