@@ -1,4 +1,9 @@
 # reference 
+Before using ws281x library 
+install pip3 and install ws281x library from pip3
+
+1. `sudo apt install pip3`
+2. `sudo pip3 install ws281x`
 
 ## rpi_led_tape
 led tape
