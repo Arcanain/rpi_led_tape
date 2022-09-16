@@ -5,9 +5,9 @@ install pip3 and install ws281x library from pip3
 1. `sudo apt install pip3`
 2. `sudo pip3 install ws281x`
 
-## reference 
+# reference 
 
-### rpi_led_tape
+## rpi_led_tape
 led tape
 
 ws2812について
@@ -19,9 +19,11 @@ led tape のラズパイで制御方法
 2. https://www.youtube.com/watch?v=BZDwrxX8YEU
 
 
-### ros raspberry pi led blink
+## ros raspberry pi led blink
 1. https://kanpapa.com/today/2022/05/ros-pub-sub-pigpio-blink-led.html
 
 ## subprocess の参考文献
 
 1. https://stackoverflow.com/questions/52721537/opens-a-process-with-popen-cant-close-it-need-to-run-ros-command-in-cmd
+2. https://myenigma.hatenablog.com/entry/20110326/1301150990
+3. https://myenigma.hatenablog.com/entry/20110325/1301057472
