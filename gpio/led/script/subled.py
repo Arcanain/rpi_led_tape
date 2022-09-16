@@ -6,7 +6,6 @@
 import rospy
 import pigpio
 import subprocess
-import os
 import time 
 from std_msgs.msg import String
 
