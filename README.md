@@ -21,3 +21,7 @@ led tape のラズパイで制御方法
 
 ### ros raspberry pi led blink
 1. https://kanpapa.com/today/2022/05/ros-pub-sub-pigpio-blink-led.html
+
+## subprocess の参考文献
+
+1. https://stackoverflow.com/questions/52721537/opens-a-process-with-popen-cant-close-it-need-to-run-ros-command-in-cmd
