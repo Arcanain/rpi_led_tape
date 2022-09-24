@@ -5,6 +5,12 @@ install pip3 and install ws281x library from pip3
 1. `sudo apt install pip3`
 2. `sudo pip3 install ws281x`
 
+# Procedure
+```
+cd ~/catkin_ws
+source ~/catkin_ws/devel/setup.bash
+roslaunch rpi_led_tape ledtape_control.launch
+```
 # reference 
 
 ## rpi_led_tape
