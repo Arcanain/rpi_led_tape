@@ -1,0 +1,4 @@
+<launch>
+  <node pkg="rpi_led_tape" name="talker" type="publed.py" output="screen"/>
+  <node pkg="rpi_led_tape" name="listener" type="subled.py" output="screen"/>
+</launch>

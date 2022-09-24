@@ -1,38 +1,29 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
-# gpio_test sub.py
-
 import rospy
-# import pigpio
 import subprocess
+from subprocess import PIPE
 import time 
 from std_msgs.msg import String
-
-# GPIO_PIN = 27
-
-pi = pigpio.pi()
-pi.set_mode(GPIO_PIN, pigpio.OUTPUT)
-
-#debug 
-#hello = ["sudo","python3","hello.py"]
-#bye= ["sudo","python3","bye.py"]
-
+import os
 
 on = ["sudo", "python3", "ledtapeON.py"]
 off= ["sudo", "python3", "ledtapeOFF.py"]
 
+led_script_path = "../catkin_ws/src/rpi_led_tape/script"
+
 def callback(data):
     rospy.loginfo(rospy.get_caller_id() + 'I heard %s', data.data)
     p_out = int(data.data)
-    # pi.write(GPIO_PIN, p_out)
+    #path = os.getcwd()
+    #print(path)
+
     if p_out == 1:
-        proc_h = subprocess.Popen(on)
+        proc_h = subprocess.Popen(on, cwd=led_script_path)
         print("on")
         time.sleep(1)
     else:
-        #subprocess.call("sudo","python3","bye.py")
-        proc_b = subprocess.Popen(off)
+        proc_b = subprocess.Popen(off, cwd=led_script_path)
         print("off")
         time.sleep(1)
 

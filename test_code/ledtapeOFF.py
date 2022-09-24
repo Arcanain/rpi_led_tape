@@ -1,7 +1,8 @@
 from rpi_ws281x import Color, PixelStrip
+import time 
 
 LED_COUNT = 18  # Number of LED pixels.
-LED_PIN = 18  # GPIO pin connected to the pixels (must support PWM!).
+LED_PIN = 21  # GPIO pin connected to the pixels (must support PWM!).
 LED_FREQ_HZ = 800000  # LED signal frequency in hertz (usually 800khz)
 LED_DMA = 10  # DMA channel to use for generating signal (try 10)
 LED_BRIGHTNESS = 255  # Set to 0 for darkest and 255 for brightest
@@ -35,4 +36,12 @@ class Ws281x:
             self.__strip.show()
 
 led = Ws281x()
-led.on(127, 0, 0)
+
+#while True:]
+#led.on(0,100,100)
+#time.sleep(0.5)
+led.off()
+#time.sleep(0.5)
+    
+#except KeyboardInterrupt:
+ #       led.off()
