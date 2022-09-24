@@ -18,11 +18,11 @@ def talker():
         pub.publish(msg)
 
         rate.sleep()
-
-        if i == 0:
-            i = 1
-        else:
+        
+        if i == 3:
             i = 0
+        else:
+            i = i + 1
 
 if __name__ == '__main__':
     try:

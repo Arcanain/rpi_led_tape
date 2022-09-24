@@ -7,7 +7,9 @@ import time
 from std_msgs.msg import String
 import os
 
-on = ["sudo", "python3", "ledtapeON.py"]
+red_on = ["sudo", "python3", "ledtapeRedON.py"]
+green_on = ["sudo", "python3", "ledtapeGreenON.py"]
+yellow_on = ["sudo", "python3", "ledtapeYellowON.py"]
 off= ["sudo", "python3", "ledtapeOFF.py"]
 
 led_script_path = "../catkin_ws/src/rpi_led_tape/script"
@@ -19,8 +21,16 @@ def callback(data):
     #print(path)
 
     if p_out == 1:
-        proc_h = subprocess.Popen(on, cwd=led_script_path)
-        print("on")
+        proc_h = subprocess.Popen(red_on, cwd=led_script_path)
+        print("red on")
+        time.sleep(1)
+    elif p_out == 2:
+        proc_h = subprocess.Popen(green_on, cwd=led_script_path)
+        print("green on")
+        time.sleep(1)
+    elif p_out == 3:
+        proc_h = subprocess.Popen(yellow_on, cwd=led_script_path)
+        print("yellow on")
         time.sleep(1)
     else:
         proc_b = subprocess.Popen(off, cwd=led_script_path)
