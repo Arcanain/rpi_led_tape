@@ -4,7 +4,7 @@
 from rpi_ws281x import Color, PixelStrip
 import time 
 
-LED_COUNT = 18  # Number of LED pixels.
+LED_COUNT = 62  # Number of LED pixels.
 LED_PIN = 21  # GPIO pin connected to the pixels (must support PWM!).
 LED_FREQ_HZ = 800000  # LED signal frequency in hertz (usually 800khz)
 LED_DMA = 10  # DMA channel to use for generating signal (try 10)
