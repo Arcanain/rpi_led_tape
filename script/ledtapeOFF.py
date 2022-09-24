@@ -26,12 +26,6 @@ class Ws281x:
         )
         self.__strip.begin()
 
-    def on(self, red: int, green: int, blue: int) -> None:
-        color = Color(red, green, blue)
-        for i in range(self.__strip.numPixels()):
-            self.__strip.setPixelColor(i, color)
-            self.__strip.show()
-
     def off(self) -> None:
         for i in range(self.__strip.numPixels()):
             self.__strip.setPixelColor(i, LED_STATE_OFF)
@@ -39,4 +33,3 @@ class Ws281x:
 
 led = Ws281x()
 led.off()
-
