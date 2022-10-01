@@ -5,6 +5,7 @@ import subprocess
 from subprocess import PIPE
 import time 
 from std_msgs.msg import String
+from std_msgs.msg import Int8
 import os
 
 red_on = ["sudo", "python3", "ledtapeRedON.py"]
