@@ -16,32 +16,6 @@ off= ["sudo", "python3", "ledtapeOFF.py"]
 
 led_script_path = "../catkin_ws/src/rpi_led_tape/script"
 
-def state_callback(data):
-    print(data)
-    print(data.data)
-    state_num = int(data.data)
-    print(state_num)
-
-    if state_num == 1:
-        proc_h = subprocess.Popen(yellow_on, cwd=led_script_path)
-        print("yellow on")
-        time.sleep(5)
-    elif state_num == 2:
-        proc_h = subprocess.Popen(yellow_on, cwd=led_script_path)
-        print("yellow on")
-        time.sleep(5)
-    elif state_num == 3:
-        proc_h = subprocess.Popen(green_on, cwd=led_script_path)
-        print("green on")
-        time.sleep(5)
-    elif state_num == 4:
-        #proc_b = subprocess.Popen(off, cwd=led_script_path)
-        #print("off")
-        #time.sleep(1)
-        proc_h = subprocess.Popen(yellow_on, cwd=led_script_path)
-        print("yellow on")
-        time.sleep(5)
-
 cmd_vel_joystick = Twist()
 def cmd_vel_joystick_callback(data):
     cmd_vel_joystick.linear.x = data.linear.x
@@ -80,19 +54,19 @@ if __name__ == '__main__':
 
         if state_data == 1:
             proc_h = subprocess.Popen(yellow_on, cwd=led_script_path)
-            print("yellow on")
-            time.sleep(2)
+            #print("yellow on")
+            time.sleep(4)
         elif state_data == 2:
             proc_h = subprocess.Popen(yellow_on, cwd=led_script_path)
-            print("yellow on")
-            time.sleep(2)
+            #print("yellow on")
+            time.sleep(4)
         elif state_data == 3:
             proc_h = subprocess.Popen(green_on, cwd=led_script_path)
-            print("green on")
-            time.sleep(2)
+            #print("green on")
+            time.sleep(4)
         elif state_data == 4:
             proc_b = subprocess.Popen(off, cwd=led_script_path)
-            print("off")
-            time.sleep(2)
+            #print("off")
+            time.sleep(4)
 
         r.sleep()
